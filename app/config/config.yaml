@@ -1,0 +1,28 @@
+imports:
+  - { resource: "@ElasticSearchBundle/Resources/config/services.yml" }
+  - { resource: "@KontentAiBundle/Resources/config/services.yml" }
+
+fos_elastica:
+  pages:
+    index_name: pages_%kernel.environment%
+    use_alias: true
+    types:
+      page:
+        properties:
+          id: ~
+          language: ~
+          type: ~
+          slug: ~
+          pageTitle: ~
+          pageDescription: ~
+          seoTitle: ~
+          seoDescription: ~
+          channels: ~
+        persistence:
+          elastica_to_model_transformer:
+            service: ElasticSearchBundle\Service\ElasticaToModelTransformerWithoutDoctrine
+          provider:
+            service: ElasticSearchBundle\Provider\PageProvider
+          finder: ~
+          repository: ElasticSearchBundle\SearchRepository\PageSearchRepository
+          listener: { enabled: false }

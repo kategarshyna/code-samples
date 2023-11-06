@@ -1,0 +1,3 @@
+easy_kentico:
+  resource: "@KontentAiBundle/Resources/config/routing.yml"
+  prefix:   /

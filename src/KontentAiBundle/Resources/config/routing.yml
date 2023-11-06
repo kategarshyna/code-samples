@@ -1,0 +1,9 @@
+kentico_find_pages:
+  path:     /kontent-ai/find
+  defaults: { _controller: KontentAiBundle:Search:findPages }
+  methods:  ['GET']
+
+kentico_update_pages_index:
+  path:     /kontent-ai/update
+  defaults: { _controller: KontentAiBundle:Search:updatePages }
+  methods:  ['POST']

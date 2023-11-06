@@ -1,0 +1,4 @@
+parameters:
+  kontent_ai.api_key: ''
+  kontent_ai.project_id: ''
+  kontent_ai.webhook_secret: ''

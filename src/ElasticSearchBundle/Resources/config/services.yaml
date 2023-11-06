@@ -1,0 +1,13 @@
+services:
+  ElasticSearchBundle\Provider\PageProvider:
+    public: true
+    tags:
+      - { name: fos_elastica.pager_provider, index: pages, type: page }
+  ElasticSearchBundle\SearchRepository\PageSearchRepository:
+    arguments:
+      $finder: '@fos_elastica.finder.pages.page'
+      $logger: '@Psr\Log\LoggerInterface'
+  ElasticSearchBundle\Service\PagesIndexManuallyUpdate:
+    arguments:
+      $pagesPersister: '@fos_elastica.object_persister.pages.page'
+      $logger: '@Psr\Log\LoggerInterface'

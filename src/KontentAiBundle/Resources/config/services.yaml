@@ -1,0 +1,10 @@
+services:
+  KontentAiBundle\Controller\SearchController:
+    arguments:
+      $webhookSecret: '%kontent_ai.webhook_secret%'
+
+  KontentAiBundle\Service\PageService:
+    arguments:
+      $apiKey: '%kontent_ai.api_key%'
+      $projectId: '%kontent_ai.project_id%'
+      $logger: '@Psr\Log\LoggerInterface'

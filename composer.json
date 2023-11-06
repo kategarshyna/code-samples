@@ -1,0 +1,11 @@
+{
+  "name": "code-samples",
+  //...
+  "require": {
+    //...
+    "friendsofsymfony/elastica-bundle": "v5.1.0",
+    "kontent-ai/delivery-sdk-php": "^6.0",
+    "symfony/framework-bundle": "3.4.*"
+    //...
+  }
+}
